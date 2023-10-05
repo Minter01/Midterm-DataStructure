@@ -1,0 +1,56 @@
+'''
+Write an algorithm, pseudocode, and code in Python to find the maximum element in a two-dimensional array. The array should 3 x 3 and student can provide their own given.
+
+
+Instructions:
+You are given a two-dimensional array, array, containing integer elements.
+
+1. Write an algorithm to find the maximum element in the array.
+2. Implement the algorithm in pseudocode.
+3. Translate the pseudocode into Python code.
+4. Test your code with the provided array.
+5. Print the maximum element found in the array.
+6. Ensure that your code is efficient and handles all possible edge cases.
+
+
+Algortithm:
+
+step 1: create a 3x3 2D array called "numbers" with consists of integers 
+step 2: compare the elements one by one
+step 3: if the current element is greater than the maximum element, update the maximum element with the current element
+step 4: if the current element is less than the maximum element, keep the maximum element
+step 5: repeat the process until it reaches the last element in the array
+
+pseudocode:
+
+define a function "finding_nemo (numbers)"
+use for loop in comparing the elements 
+if "maximum" (the current element) is greater than the "max_El", then "maximum" is stored in "max_El"
+return "max_El" 
+
+set ouput = function "finding_nemo (numbers)"
+print "Maximum element found in the array is " + ouput
+'''
+def finding_nemo (numbers):
+    max_El= numbers [0][0]
+    
+    for number in numbers:
+        for element in number:
+            if element > max_El:
+                max_El = element
+    return max_El
+                
+
+numbers = [
+    
+[ 10, 11, 12],
+[ 20, 21, 22],
+[ 30, 31, 32]
+    
+]
+
+output = finding_nemo(numbers)
+print ("Maximum element found in the array is", output)
+
+
+
